@@ -1,0 +1,44 @@
+services:
+  mongodb:
+    image: mongo:7
+    container_name: travel-ai-mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+
+  backend:
+    build:
+      context: ./back_end/travel-ai-api
+      dockerfile: Dockerfile
+    container_name: travel-ai-backend
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      PORT: 3000
+      MONGO_URI: mongodb://mongodb:27017/doanchuyennganh
+      JWT_SECRET: ${JWT_SECRET:-danentang}
+      GEOAPIFY_API_KEY: ${GEOAPIFY_API_KEY:-}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      EMAIL_USER: ${EMAIL_USER:-}
+      EMAIL_PASS: ${EMAIL_PASS:-}
+    depends_on:
+      - mongodb
+
+  frontend:
+    build:
+      context: ./front_end
+      dockerfile: Dockerfile
+    container_name: travel-ai-frontend
+    restart: unless-stopped
+    ports:
+      - "19006:19006"
+    environment:
+      EXPO_PUBLIC_API_URL: http://localhost:3000
+    depends_on:
+      - backend
+
+volumes:
+  mongodb_data:

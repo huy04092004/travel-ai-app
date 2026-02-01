@@ -3,9 +3,9 @@ import { View, Text, TextInput, TouchableOpacity, Alert, ActivityIndicator, Flat
 import { useRouter } from "expo-router";
 import { getUserInfo } from "@/lib/api/userAPI";
 import { AntDesign } from "@expo/vector-icons";
+import { ITINERARIES_API_URL } from "@/lib/config";
 
-const LAN_IP = "192.168.1.10"; // Đổi thành IP LAN thật của bạn
-const API_URL = `http://${LAN_IP}:3000/api/itineraries`;
+const API_URL = ITINERARIES_API_URL;
 
 export default function AddTripScreen() {
   const [travelTime, setTravelTime] = useState("");
