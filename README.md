@@ -18,7 +18,6 @@ A backend system for an AI-powered travel itinerary application that generates p
 
 ## Project Structure
 
- 
 travel-ai-api/
 ├── routes/
 │   ├── direction.js      // Direction APIs
@@ -33,6 +32,7 @@ travel-ai-api/
 │   ├── Location.js       // Location schema
 │   ├── Location_v2.js    // Enhanced location schema
 │   └── User.js           // User schema
+
 ## Main APIs
 | Method | Endpoint | Description |
 |--------|---------|------------|
