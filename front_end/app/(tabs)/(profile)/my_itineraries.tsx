@@ -3,10 +3,9 @@ import { View, Text, FlatList, ActivityIndicator, TouchableOpacity, Alert } from
 import { useRouter } from "expo-router";
 import { getUserInfo } from "@/lib/api/userAPI";
 import { AntDesign } from "@expo/vector-icons";
+import { ITINERARIES_API_URL } from "@/lib/config";
 
-// Đặt IP LAN của máy tính bạn ở đây (ví dụ: 192.168.1.10)
-const LAN_IP = "192.168.1.10"; // TODO: Đổi thành IP LAN thật của bạn
-const API_URL = `http://${LAN_IP}:3000/api/itineraries`;
+const API_URL = ITINERARIES_API_URL;
 
 interface Itinerary {
   _id: string;
