@@ -16,6 +16,10 @@ A backend system for an AI-powered travel itinerary application that generates p
 - MongoDB
 - Gemini API
 
+ ## Demo
+Full UI screenshots:  
+https://github.com/huy04092004/travel-ai-app/tree/main/docs
+
 ## Project Structure
 
     travel-ai-api/
