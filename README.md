@@ -10,7 +10,6 @@ A backend system for an AI-powered travel itinerary application that generates p
 - Store itineraries and metadata in MongoDB
 
 ## Tech Stack
-
  -Node.js
 -Express.js
 -TypeScript
