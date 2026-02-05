@@ -9,13 +9,16 @@ A backend system for an AI-powered travel itinerary application that generates p
 - RESTful APIs for frontend/mobile clients
 - Store itineraries and metadata in MongoDB
 
+## Tech Stack 
+- Node.js - Express.js - TypeScript - MongoDB - Gemini API
+
 ## Tech Stack
- -Node.js
--Express.js
--TypeScript
--MongoDB
--Gemini API
--React Native (Expo)
+- Node.js
+- Express.js
+- TypeScript
+- MongoDB
+- Gemini API
+- React Native (Expo)
 
  ## Demo
 Full UI screenshots:  
