@@ -9,9 +9,6 @@ A backend system for an AI-powered travel itinerary application that generates p
 - RESTful APIs for frontend/mobile clients
 - Store itineraries and metadata in MongoDB
 
-## Tech Stack 
-- Node.js - Express.js - TypeScript - MongoDB - Gemini API
-
 ## Tech Stack
 - Node.js
 - Express.js
@@ -51,4 +48,10 @@ https://github.com/huy04092004/travel-ai-app/tree/main/docs
 git clone https://github.com/huy04092004/travel-ai-backend.git
 cd travel-ai-backend
 npm install
-npm run dev
+npm run start
+
+git clone https://github.com/huy04092004/travel-ai-app.git
+cd travel-ai-app
+npm install
+npx expo start
+
